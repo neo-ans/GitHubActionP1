@@ -31,7 +31,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with: 
-        run: umount /var/lib/docker/temp
+        run: umount /var/lib/docker/tmp/buildkit-mount3303431219/build/libs
         image: ansarrahim/demo-app
         registry: registry.hub.docker.com
         username: ansarrahim
