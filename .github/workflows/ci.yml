@@ -29,7 +29,7 @@ jobs:
       run: ./gradlew build
       
     - name: Prune Docker
-      run: echo y | docker builder prune -a
+      run: echo y | docker system prune -a
 
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
