@@ -27,10 +27,12 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+      
+    - name: Prune Docker
+      run: docker builder prune -a
 
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
-      run: docker builder prune -a
       with: 
         image: ansarrahim/demo-app
         registry: docker.io
