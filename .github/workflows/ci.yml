@@ -31,9 +31,9 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with: 
-        run: mkdir /var/lib/docker/tmp/buildkit-mount3303431219/build/libs
+        run: sudo mkdir /var/lib/docker/tmp/buildkit-mount3303431219/build/libs
         image: ansarrahim/demo-app
-        registry: registry.hub.docker.com
+        registry: docker.io
         username: ansarrahim
         password: ansar1234
          
